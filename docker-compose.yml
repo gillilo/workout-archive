@@ -37,7 +37,7 @@ services:  # 애플리케이션의 서비스 정의
     image: gillilo/workout-archive-web:latest
     container_name: workout-archive-web
     environment:  # 환경 변수 설정
-      - REQUEST_URL=workout-archive-api
+      - REQUEST_URL=http://workout-archive-api:8080
     ports:  # 포트 매핑
       - 84:80
     # depends_on:
