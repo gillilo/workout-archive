@@ -23,7 +23,7 @@ services:  # 애플리케이션의 서비스 정의
       - DB_USERNAME=gillilo
       - DB_PASSWORD=gillilo
     ports:  # 포트 매핑
-      - 83:8080
+      - 83:80
     depends_on:
       - workout-archive-db
     # deploy:
@@ -37,7 +37,7 @@ services:  # 애플리케이션의 서비스 정의
     image: gillilo/workout-archive-web:latest
     container_name: workout-archive-web
     environment:  # 환경 변수 설정
-      - REQUEST_URL=http://workout-archive-api:8080
+      - REQUEST_URL=http://workout-archive-api
     ports:  # 포트 매핑
       - 84:80
     # depends_on:
